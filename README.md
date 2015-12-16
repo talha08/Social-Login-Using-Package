@@ -95,7 +95,7 @@ return array(
 
 
 
-
+```
 #### Option 3
 In The Route:
 
@@ -108,13 +108,16 @@ Route::get('home', ['as'=>'user','uses' => 'SocialController@show']);
 Route::get('login/fb', ['as'=>'login/fb','uses' => 'SocialController@loginWithFacebook']);
 Route::get('logout', ['as' => 'logout', 'uses' => 'SocialController@logout']);
 
-```
 
+```
 #### Option 4
 In The Controller:
+```
 
-```php
+
+
 ####For Auth Check---
+
 
 public function show()
     {
@@ -194,3 +197,4 @@ public function loginWithFacebook() {
         return Redirect::route('user');
     }
     
+```
