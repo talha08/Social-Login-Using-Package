@@ -1,25 +1,92 @@
-## Laravel PHP Framework
+## Installation
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Add oauth-4-laravel to your composer.json file:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+```
+"require": {
+  "artdarek/oauth-4-laravel": "dev-master"
+}
+```
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+Use composer to install this package.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+```
+$ composer update
+```
 
-## Official Documentation
+### Registering the Package
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+Register the service provider within the ```providers``` array found in ```app/config/app.php```:
 
-### Contributing To Laravel
+```php
+'providers' => array(
+	// ...
+	
+	'Artdarek\OAuth\OAuthServiceProvider'
+)
+```
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+Add an alias within the ```aliases``` array found in ```app/config/app.php```:
 
-### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+```php
+'aliases' => array(
+	// ...
+	
+	'OAuth' => 'Artdarek\OAuth\Facade\OAuth',
+)
+```
+
+## Configuration
+
+There are two ways to configure oauth-4-laravel.
+You can choose the most convenient way for you. 
+You can use package config file which can be 
+generated through command line by artisan (option 1) or 
+you can simply create a config file called ``oauth-4-laravel.php`` in 
+your ``app\config\`` directory (option 2).
+
+#### Option 1
+
+Create configuration file for package using artisan command
+
+```
+$ php artisan config:publish artdarek/oauth-4-laravel
+```
+
+#### Option 2
+
+Create configuration file manually in config directory ``app/config/oauth-4-laravel.php`` and put there code from below.
+
+```php
+<?php
+return array( 
+	
+	/*
+	|--------------------------------------------------------------------------
+	| oAuth Config
+	|--------------------------------------------------------------------------
+	*/
+
+	/**
+	 * Storage
+	 */
+	'storage' => 'Session', 
+
+	/**
+	 * Consumers
+	 */
+	'consumers' => array(
+
+		/**
+		 * Facebook
+		 */
+		'Facebook' => array(
+		    'client_id'     => '',
+		    'client_secret' => '',
+		    'scope'         => array(),
+		),		
+
+	)
+
+);
