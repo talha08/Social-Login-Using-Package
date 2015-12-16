@@ -99,7 +99,7 @@ return array(
 #### Option 3
 In The Route:
 
-```php
+```
 Route::get('/', function()
 {
 	return Redirect::route('user');
@@ -108,7 +108,7 @@ Route::get('home', ['as'=>'user','uses' => 'SocialController@show']);
 Route::get('login/fb', ['as'=>'login/fb','uses' => 'SocialController@loginWithFacebook']);
 Route::get('logout', ['as' => 'logout', 'uses' => 'SocialController@logout']);
 
-
+```
 
 #### Option 4
 In The Controller:
