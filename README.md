@@ -1,3 +1,11 @@
+# Social-Login-Using-Package
+
+Package: [Lusitanian/PHPoAuthLib](https://github.com/artdarek/oauth-4-laravel) 
+For Other Social Login Examples: [Lusitanian/PHPoAuthLib](https://github.com/Lusitanian/PHPoAuthLib/tree/master/examples) 
+
+
+
+
 ## Installation
 
 Add oauth-4-laravel to your composer.json file:
