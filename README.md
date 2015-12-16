@@ -104,7 +104,7 @@ return array(
 
 
 ```
-#### Option 3
+#### Route
 In The Route:
 
 ```php
@@ -120,7 +120,7 @@ Route::get('logout', ['as' => 'logout', 'uses' => 'SocialController@logout']);
 
 
 ```
-#### Option 4
+#### Controller
 In The Controller:
 ```php
 
@@ -220,3 +220,10 @@ public function loginWithFacebook() {
     
  }
 ```
+
+```
+#### View
+See The View File
+```
+
+
