@@ -99,7 +99,9 @@ return array(
 #### Option 3
 In The Route:
 
-```
+```php
+<?php
+
 Route::get('/', function()
 {
 	return Redirect::route('user');
@@ -119,7 +121,9 @@ In The Controller:
 
 class SocialController extends BaseController {
 
-
+         /**
+	 * Auth Check
+	 */
 
 public function show()
     {
@@ -132,7 +136,10 @@ public function show()
     }
 
 
-####Facebook Login & Sign up
+
+         /**
+	 * Facebook Login & Sign up
+	 */
 
 public function loginWithFacebook() {
 
@@ -192,7 +199,9 @@ public function loginWithFacebook() {
 
     }
     
-   ####Logout
+       /**
+	 * Logout
+	 */
    
     public function logout(){
         Auth::logout();
