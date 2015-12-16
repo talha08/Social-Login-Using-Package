@@ -112,11 +112,13 @@ Route::get('logout', ['as' => 'logout', 'uses' => 'SocialController@logout']);
 ```
 #### Option 4
 In The Controller:
-```
+```php
 
 
+<?php
 
-####For Auth Check---
+class SocialController extends BaseController {
+
 
 
 public function show()
@@ -197,4 +199,7 @@ public function loginWithFacebook() {
         return Redirect::route('user');
     }
     
+    
+    
+ }
 ```
