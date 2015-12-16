@@ -1,6 +1,6 @@
 # Social-Login-Using-Package
 
-Package: [Lusitanian/PHPoAuthLib](https://github.com/artdarek/oauth-4-laravel) 
+Package: [artdarek/oauth-4-laravel](https://github.com/artdarek/oauth-4-laravel) 
 For Other Social Login Examples: [Lusitanian/PHPoAuthLib](https://github.com/Lusitanian/PHPoAuthLib/tree/master/examples) 
 
 
