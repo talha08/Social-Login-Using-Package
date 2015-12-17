@@ -227,3 +227,6 @@ See The View File
 ```
 
 
+##For Create Application:[talha08/Login with Social APP Create Link](https://gist.github.com/talha08/4fb8373252c36cde8ff8) 
+
+
